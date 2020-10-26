@@ -11,18 +11,5 @@ public final class Constants {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
-
-    //COORDINATES
-
-    //EASY
-    public static final int X_MATRICE_FACILE =  25;
-    public static final int Y_MATRICE_FACILE = 25;
-    public static final int X_JSON_FACILE = 25;
-    public static final int Y_JSON_FACILE = 25;
-    //MEDIUM
-    public static final int X_MATRICE_MEDIO =  32;
-    public static final int Y_MATRICE_MEDIO = 32;
-    public static final int X_JSON_MEDIO = 32;
-    public static final int Y_JSON_MEDIO = 32;
 }
 
