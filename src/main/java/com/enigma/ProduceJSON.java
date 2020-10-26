@@ -20,24 +20,24 @@ public class ProduceJSON {
                 FileWriter file;
 
                 //EASY
+                percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
                 for (int i = 1; i <= 2; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
-                    percorsi = new JSONArray();
                     System.out.println("Crea Labirinto Facile n° "+String.valueOf(i));
                     int X_Matrice = 0;
                     int X_Json = 0;
                     int Y_Matrice = 0;
                     int Y_Json = 0;
-                    String matrix[][] = new String[54][54];
+                    String matrix[][] = new String[5][5];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
                     //NUMERO DI PERCORSI
-                    for (int j = 1; j <= 54; j++) {
+                    for (int j = 1; j <= 5; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
@@ -87,24 +87,24 @@ public class ProduceJSON {
                 difficolta.put("Easy", percorsi);
 
                 //MEDIUM
+                percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
                 for (int i = 1; i <= 2; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
-                    percorsi = new JSONArray();
                     System.out.println("Crea Labirinto Medio n° "+String.valueOf(i));
                     int X_Matrice = 0;
                     int X_Json = 0;
                     int Y_Matrice = 0;
                     int Y_Json = 0;
-                    String matrix[][] = new String[78][78];
+                    String matrix[][] = new String[5][5];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
                     //NUMERO DI PERCORSI
-                    for (int j = 1; j <= 78; j++) {
+                    for (int j = 1; j <= 5; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
@@ -155,24 +155,24 @@ public class ProduceJSON {
 
 
                 //HARD
+                percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
                 for (int i = 1; i <= 2; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
-                    percorsi = new JSONArray();
                     System.out.println("Crea Labirinto Difficile n° "+String.valueOf(i));
                     int X_Matrice = 0;
                     int X_Json = 0;
                     int Y_Matrice = 0;
                     int Y_Json = 0;
-                    String matrix[][] = new String[108][108];
+                    String matrix[][] = new String[5][5];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
                     //NUMERO DI PERCORSI
-                    for (int j = 1; j <= 108; j++) {
+                    for (int j = 1; j <= 5; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
@@ -222,7 +222,6 @@ public class ProduceJSON {
                 difficolta.put("Hard", percorsi);
 
 
-
             try {
                     file = new FileWriter("C:/Users/Luca/Desktop/Enigma.json");
                     file.write(difficolta.toJSONString());
@@ -237,21 +236,21 @@ public class ProduceJSON {
     private static void randomXYFacile() {
         Random r = new Random();
         int low = 2;
-        int high = 52;
+        int high = 4;
         x = r.nextInt(high - low) + low;
         y = r.nextInt(high - low) + low;
     }
     private static void randomXYMedio() {
         Random r = new Random();
         int low = 2;
-        int high = 76;
+        int high = 4;
         x = r.nextInt(high - low) + low;
         y = r.nextInt(high - low) + low;
     }
     private static void randomXYDifficile() {
         Random r = new Random();
         int low = 2;
-        int high = 106;
+        int high = 4;
         x = r.nextInt(high - low) + low;
         y = r.nextInt(high - low) + low;
     }
