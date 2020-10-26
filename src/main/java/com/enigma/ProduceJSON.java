@@ -235,22 +235,22 @@ public class ProduceJSON {
 
     private static void randomXYFacile() {
         Random r = new Random();
-        int low = 2;
-        int high = 4;
+        int low = 10;
+        int high = 44;
         x = r.nextInt(high - low) + low;
         y = r.nextInt(high - low) + low;
     }
     private static void randomXYMedio() {
         Random r = new Random();
-        int low = 2;
-        int high = 4;
+        int low = 14;
+        int high = 62;
         x = r.nextInt(high - low) + low;
         y = r.nextInt(high - low) + low;
     }
     private static void randomXYDifficile() {
         Random r = new Random();
-        int low = 2;
-        int high = 4;
+        int low = 18;
+        int high = 88;
         x = r.nextInt(high - low) + low;
         y = r.nextInt(high - low) + low;
     }
