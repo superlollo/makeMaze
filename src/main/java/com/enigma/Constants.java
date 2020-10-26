@@ -13,9 +13,16 @@ public final class Constants {
     public static final String ANSI_WHITE = "\u001B[37m";
 
     //COORDINATES
-    public static final int X_MATRICE_FACILE =  2;
-    public static final int Y_MATRICE_FACILE = 2;
-    public static final int X_JSON_FACILE = 2;
-    public static final int Y_JSON_FACILE = 2;
+
+    //EASY
+    public static final int X_MATRICE_FACILE =  25;
+    public static final int Y_MATRICE_FACILE = 25;
+    public static final int X_JSON_FACILE = 25;
+    public static final int Y_JSON_FACILE = 25;
+    //MEDIUM
+    public static final int X_MATRICE_MEDIO =  32;
+    public static final int Y_MATRICE_MEDIO = 32;
+    public static final int X_JSON_MEDIO = 32;
+    public static final int Y_JSON_MEDIO = 32;
 }
 
