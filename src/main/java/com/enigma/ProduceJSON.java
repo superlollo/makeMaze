@@ -22,7 +22,7 @@ public class ProduceJSON {
                 //EASY
                 percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
-                for (int i = 1; i <= 2; i++) {
+                for (int i = 1; i <= 20; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Facile n° "+String.valueOf(i));
@@ -30,14 +30,14 @@ public class ProduceJSON {
                     int X_Json = 0;
                     int Y_Matrice = 0;
                     int Y_Json = 0;
-                    String matrix[][] = new String[5][5];
+                    String matrix[][] = new String[54][54];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
                     //NUMERO DI PERCORSI
-                    for (int j = 1; j <= 5; j++) {
+                    for (int j = 1; j <= 54; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
@@ -89,7 +89,7 @@ public class ProduceJSON {
                 //MEDIUM
                 percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
-                for (int i = 1; i <= 2; i++) {
+                for (int i = 1; i <= 20; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Medio n° "+String.valueOf(i));
@@ -97,14 +97,14 @@ public class ProduceJSON {
                     int X_Json = 0;
                     int Y_Matrice = 0;
                     int Y_Json = 0;
-                    String matrix[][] = new String[5][5];
+                    String matrix[][] = new String[78][78];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
                     //NUMERO DI PERCORSI
-                    for (int j = 1; j <= 5; j++) {
+                    for (int j = 1; j <= 78; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
@@ -157,7 +157,7 @@ public class ProduceJSON {
                 //HARD
                 percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
-                for (int i = 1; i <= 2; i++) {
+                for (int i = 1; i <= 20; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Difficile n° "+String.valueOf(i));
@@ -165,14 +165,14 @@ public class ProduceJSON {
                     int X_Json = 0;
                     int Y_Matrice = 0;
                     int Y_Json = 0;
-                    String matrix[][] = new String[5][5];
+                    String matrix[][] = new String[108][108];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
                     //NUMERO DI PERCORSI
-                    for (int j = 1; j <= 5; j++) {
+                    for (int j = 1; j <= 108; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
