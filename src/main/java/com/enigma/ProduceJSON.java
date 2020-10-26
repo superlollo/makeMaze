@@ -84,7 +84,7 @@ public class ProduceJSON {
                     labirinti.put("maze", array);
                     percorsi.add(labirinti);
                 }
-                difficolta.put("Easy", percorsi);
+                difficolta.put("easy", percorsi);
 
                 //MEDIUM
                 percorsi = new JSONArray();
@@ -151,7 +151,7 @@ public class ProduceJSON {
                     labirinti.put("maze", array);
                     percorsi.add(labirinti);
                 }
-                difficolta.put("Medium", percorsi);
+                difficolta.put("medium", percorsi);
 
 
                 //HARD
@@ -219,7 +219,7 @@ public class ProduceJSON {
                     labirinti.put("maze", array);
                     percorsi.add(labirinti);
                 }
-                difficolta.put("Hard", percorsi);
+                difficolta.put("hard", percorsi);
 
 
             try {
