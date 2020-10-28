@@ -44,19 +44,19 @@ public class ProduceJSON {
                             System.out.print("Muovi: ");
                             int mossa = in.nextInt();
                             switch (mossa) {
-                                case (8):
+                                case (SU):
                                     X_Matrice = X_Matrice - 1;
                                     Y_Json = Y_Json + 1;
                                     break;
-                                case (2):
+                                case (GIU):
                                     X_Matrice = X_Matrice + 1;
                                     Y_Json = Y_Json - 1;
                                     break;
-                                case (4):
+                                case (SX):
                                     Y_Matrice = Y_Matrice - 1;
                                     X_Json = X_Json - 1;
                                     break;
-                                case (6):
+                                case (DX):
                                     Y_Matrice = Y_Matrice + 1;
                                     X_Json = X_Json + 1;
                                     break;
@@ -111,19 +111,19 @@ public class ProduceJSON {
                             System.out.print("Muovi: ");
                             int mossa = in.nextInt();
                             switch (mossa) {
-                                case (8):
+                                case (SU):
                                     X_Matrice = X_Matrice - 1;
                                     Y_Json = Y_Json + 1;
                                     break;
-                                case (2):
+                                case (GIU):
                                     X_Matrice = X_Matrice + 1;
                                     Y_Json = Y_Json - 1;
                                     break;
-                                case (4):
+                                case (SX):
                                     Y_Matrice = Y_Matrice - 1;
                                     X_Json = X_Json - 1;
                                     break;
-                                case (6):
+                                case (DX):
                                     Y_Matrice = Y_Matrice + 1;
                                     X_Json = X_Json + 1;
                                     break;
@@ -179,19 +179,19 @@ public class ProduceJSON {
                             System.out.print("Muovi: ");
                             int mossa = in.nextInt();
                             switch (mossa) {
-                                case (8):
+                                case (SU):
                                     X_Matrice = X_Matrice - 1;
                                     Y_Json = Y_Json + 1;
                                     break;
-                                case (2):
+                                case (GIU):
                                     X_Matrice = X_Matrice + 1;
                                     Y_Json = Y_Json - 1;
                                     break;
-                                case (4):
+                                case (SX):
                                     Y_Matrice = Y_Matrice - 1;
                                     X_Json = X_Json - 1;
                                     break;
-                                case (6):
+                                case (DX):
                                     Y_Matrice = Y_Matrice + 1;
                                     X_Json = X_Json + 1;
                                     break;
