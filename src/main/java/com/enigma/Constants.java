@@ -1,7 +1,7 @@
 package com.enigma;
 
 public final class Constants {
-    //COLORS
+    //COLORI PER PERCORSO MATRICE
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -13,10 +13,13 @@ public final class Constants {
     public static final String ANSI_WHITE = "\u001B[37m";
 
 
-    //MOSSE
+    //MOVIMENTO LETTO DA TASTIERA
     public static final int SU = 1;
     public static final int GIU = 2;
     public static final int SX = 3;
     public static final int DX = 4;
+
+    //NUMERO LABIRINTI
+    public static final int NUM_LAB = 20;
 }
 

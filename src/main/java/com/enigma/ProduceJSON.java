@@ -22,7 +22,7 @@ public class ProduceJSON {
                 //EASY
                 percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
-                for (int i = 1; i <= 20; i++) {
+                for (int i = 1; i <= NUM_LAB; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Facile n° "+String.valueOf(i));
@@ -89,7 +89,7 @@ public class ProduceJSON {
                 //MEDIUM
                 percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
-                for (int i = 1; i <= 20; i++) {
+                for (int i = 1; i <= NUM_LAB; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Medio n° "+String.valueOf(i));
@@ -157,7 +157,7 @@ public class ProduceJSON {
                 //HARD
                 percorsi = new JSONArray();
                 //NUMERO DI LABIRINTI
-                for (int i = 1; i <= 20; i++) {
+                for (int i = 1; i <= NUM_LAB; i++) {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Difficile n° "+String.valueOf(i));
@@ -253,9 +253,5 @@ public class ProduceJSON {
         int high = 88;
         x = r.nextInt(high - low) + low;
         y = r.nextInt(high - low) + low;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(doMaze());
     }
 }
