@@ -13,7 +13,12 @@ import static com.enigma.Constants.*;
 public class ProduceJSON {
     private  static     int x;
     private     static    int y;
-        public static String doMaze() {
+    private static int X_Matrice;
+    private static int X_Json;
+    private static int Y_Matrice;
+    private static int Y_Json;
+
+    public static String doMaze() {
                 String message = "";
                 JSONArray percorsi = null;
                 JSONObject difficolta = new JSONObject();
@@ -26,43 +31,18 @@ public class ProduceJSON {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Facile n° "+String.valueOf(i));
-                    int X_Matrice = 0;
-                    int X_Json = 0;
-                    int Y_Matrice = 0;
-                    int Y_Json = 0;
                     String matrix[][] = new String[54][54];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
-                    //NUMERO DI PERCORSI
+                    //NUMERO DI PASSI
                     for (int j = 1; j <= 54; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
-                            System.out.print("Muovi: ");
-                            int mossa = in.nextInt();
-                            switch (mossa) {
-                                case (SU):
-                                    X_Matrice = X_Matrice - 1;
-                                    Y_Json = Y_Json + 1;
-                                    break;
-                                case (GIU):
-                                    X_Matrice = X_Matrice + 1;
-                                    Y_Json = Y_Json - 1;
-                                    break;
-                                case (SX):
-                                    Y_Matrice = Y_Matrice - 1;
-                                    X_Json = X_Json - 1;
-                                    break;
-                                case (DX):
-                                    Y_Matrice = Y_Matrice + 1;
-                                    X_Json = X_Json + 1;
-                                    break;
-                                default:
-                                    break;
-                            }
+                            switchMossa(in);
                         }
                         else{
                             randomXYFacile();
@@ -93,43 +73,18 @@ public class ProduceJSON {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Medio n° "+String.valueOf(i));
-                    int X_Matrice = 0;
-                    int X_Json = 0;
-                    int Y_Matrice = 0;
-                    int Y_Json = 0;
                     String matrix[][] = new String[78][78];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
-                    //NUMERO DI PERCORSI
+                    //NUMERO DI PASSI
                     for (int j = 1; j <= 78; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
-                            System.out.print("Muovi: ");
-                            int mossa = in.nextInt();
-                            switch (mossa) {
-                                case (SU):
-                                    X_Matrice = X_Matrice - 1;
-                                    Y_Json = Y_Json + 1;
-                                    break;
-                                case (GIU):
-                                    X_Matrice = X_Matrice + 1;
-                                    Y_Json = Y_Json - 1;
-                                    break;
-                                case (SX):
-                                    Y_Matrice = Y_Matrice - 1;
-                                    X_Json = X_Json - 1;
-                                    break;
-                                case (DX):
-                                    Y_Matrice = Y_Matrice + 1;
-                                    X_Json = X_Json + 1;
-                                    break;
-                                default:
-                                    break;
-                            }
+                            switchMossa(in);
                         }
                         else{
                             randomXYMedio();
@@ -161,43 +116,18 @@ public class ProduceJSON {
                     JSONArray array = new JSONArray();
                     JSONObject labirinti = new JSONObject();
                     System.out.println("Crea Labirinto Difficile n° "+String.valueOf(i));
-                    int X_Matrice = 0;
-                    int X_Json = 0;
-                    int Y_Matrice = 0;
-                    int Y_Json = 0;
                     String matrix[][] = new String[108][108];
                     for (int z = 0; z < matrix.length; z++) {
                         for (int u = 0; u < matrix.length; u++) {
                             matrix[z][u] = "0";
                         }
                     }
-                    //NUMERO DI PERCORSI
+                    //NUMERO DI PASSI
                     for (int j = 1; j <= 108; j++) {
                         JSONObject item = new JSONObject();
                         Scanner in = new Scanner(System.in);
                         if(j!=1) {
-                            System.out.print("Muovi: ");
-                            int mossa = in.nextInt();
-                            switch (mossa) {
-                                case (SU):
-                                    X_Matrice = X_Matrice - 1;
-                                    Y_Json = Y_Json + 1;
-                                    break;
-                                case (GIU):
-                                    X_Matrice = X_Matrice + 1;
-                                    Y_Json = Y_Json - 1;
-                                    break;
-                                case (SX):
-                                    Y_Matrice = Y_Matrice - 1;
-                                    X_Json = X_Json - 1;
-                                    break;
-                                case (DX):
-                                    Y_Matrice = Y_Matrice + 1;
-                                    X_Json = X_Json + 1;
-                                    break;
-                                default:
-                                    break;
-                            }
+                            switchMossa(in);
                         }
                         else{
                             randomXYDifficile();
@@ -223,7 +153,7 @@ public class ProduceJSON {
 
 
             try {
-                    file = new FileWriter("C:/Users/Luca/Desktop/Enigma.json");
+                    file = new FileWriter("C:/Users/Luca/Desktop/Mazes.json");
                     file.write(difficolta.toJSONString());
                     file.close();
                 }catch (IOException e){
@@ -232,6 +162,33 @@ public class ProduceJSON {
                 message = difficolta.toString();
                 return message;
         }
+
+
+    private static void switchMossa(Scanner in){
+        System.out.print("Muovi: ");
+        int mossa = in.nextInt();
+        switch (mossa) {
+            case (SU):
+                X_Matrice = X_Matrice - 1;
+                Y_Json = Y_Json + 1;
+                break;
+            case (GIU):
+                X_Matrice = X_Matrice + 1;
+                Y_Json = Y_Json - 1;
+                break;
+            case (SX):
+                Y_Matrice = Y_Matrice - 1;
+                X_Json = X_Json - 1;
+                break;
+            case (DX):
+                Y_Matrice = Y_Matrice + 1;
+                X_Json = X_Json + 1;
+                break;
+            default:
+                break;
+        }
+
+    }
 
     private static void randomXYFacile() {
         Random r = new Random();
